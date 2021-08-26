@@ -324,6 +324,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:color002 = ['#000044','23']
     let s:color004 = ['#000044','4']
     let s:color017 = ['#000044','17']
+    let s:color020 = ['#000044','20']
+    let s:color028 = ['#000044','28']
     let s:color234 = ['#000044','234']  " --- 深灰
     let s:color235 = ['#000044','235']
     let s:color236 = ['#000044','236']
@@ -815,12 +817,17 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Vim highlighting --------------------------------------------------------{{{
+  call <sid>X('vimComment',      s:color028, '',s:italic)
+  call <sid>X('vim9Comment',     s:color028, '',s:italic)
+  call <sid>X('vimString',       s:color028, '',s:italic)
+  call <sid>X('vimLineComment',  s:color028, '',s:italic)
+  call <sid>X('vim9LineComment', s:color028, '',s:italic)
+  call <sid>X('vimCommand',      s:hue_3,  '', '')
   call <sid>X('vimCommand',      s:hue_3,  '', '')
   call <sid>X('vimCommentTitle', s:mono_3, '', 'bold')
   call <sid>X('vimFunction',     s:hue_1,  '', '')
   call <sid>X('vimFuncName',     s:hue_3,  '', '')
   call <sid>X('vimHighlight',    s:hue_2,  '', '')
-  call <sid>X('vimLineComment',  s:mono_3, '', s:italic)
   call <sid>X('vimParenSep',     s:mono_2, '', '')
   call <sid>X('vimSep',          s:mono_2, '', '')
   call <sid>X('vimUserFunc',     s:hue_1,  '', '')
